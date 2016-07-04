@@ -1,4 +1,6 @@
 const electron = require('electron')
+const path = require('path');
+const spawn = require('child_process').spawn;
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
@@ -49,6 +51,7 @@ function handleStartupEvent() {
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
+var URL_LOCATION = 'http://geiger.alabastertech.com/';
 var checkForUpdates = false;
 function check_for_updates() {
   if(checkForUpdates && process.platform !== 'linux') {
