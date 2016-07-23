@@ -3,6 +3,10 @@
   "version": "2.7.1",
   "description": "A minimal Electron application",
   "main": "main.js",
+  "author": {
+    "name": "Gregori Kanatzidis",
+    "email": "kanatzidisg@gmail.com"
+  },
   "scripts": {
     "start": "electron ."
   },
@@ -16,7 +20,6 @@
     "start",
     "tutorial"
   ],
-  "author": "GitHub",
   "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/electron/electron-quick-start/issues"
