@@ -57,7 +57,7 @@ function createWindow () {
   if(handleStartupEvent()) {
     return;
   }
-  //check_for_updates();
+  check_for_updates();
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
 
