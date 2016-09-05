@@ -6,6 +6,8 @@ const app = electron.app
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
 
+const check_for_updates = require('./lib/autoUpdate');
+
 function handleStartupEvent() {
   if (process.platform !== 'win32') {
     return false;
@@ -51,47 +53,11 @@ function handleStartupEvent() {
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
-var URL_LOCATION = 'http://geiger.alabastertech.com/';
-var checkForUpdates = false;
-function check_for_updates() {
-  if(checkForUpdates && process.platform !== 'linux') {
-    var updateUrl = URL_LOCATION + 'update/' + process.platform + '?version=' + require('./package').version;
-    request.get(updateUrl, function(err, res, body) {
-      if(err) throw err;
-      if(typeof body === 'string') body = JSON.parse(body);
-      if(res.statusCode == 200) {
-        console.log(body);
-        dialog.showMessageBox({
-          title: 'An update is available',
-          message: 'A new version is available (' + body.version + '). Would you like to download this update?',
-          buttons: ['Download', 'Skip for now'],
-        }, function(result) {
-          if(result == 0) {
-            autoUpdater.setFeedUrl(updateUrl);
-            autoUpdater.on('error', function(err) {
-              dialog.showErrorBox('Update error', err);
-            }).on('update-downloaded', function() {
-              dialog.showMessageBox({
-                title: 'Update ready to install',
-                message: 'Successfully downloaded update. Click to update and restart.',
-                buttons: ['Update and restart'],
-              }, function(result) {
-                autoUpdater.quitAndInstall();
-              });
-            });
-          }
-        });
-
-      }
-    });
-  }
-}
-
 function createWindow () {
   if(handleStartupEvent()) {
     return;
   }
-  check_for_updates();
+  //check_for_updates();
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
 
