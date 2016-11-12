@@ -6,7 +6,7 @@ const app = electron.app
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
 
-const checkForUpdates = require('geiger-autoupdate');
+const { checkForUpdates } = require('geiger-autoupdate');
 
 function handleStartupEvent() {
   if (process.platform !== 'win32') {
