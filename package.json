@@ -29,7 +29,7 @@
     "electron-prebuilt": "^1.2.0"
   },
   "dependencies": {
-    "geiger-autoupdate": "0.0.1",
+    "geiger-autoupdate": "0.0.5",
     "request": "^2.74.0"
   }
 }
