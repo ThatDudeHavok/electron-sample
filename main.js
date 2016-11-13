@@ -46,8 +46,10 @@ function createWindow () {
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
 
+  setTimeout(() => {
 const { checkForUpdates } = require('geiger-autoupdate');
   checkForUpdates();
+  }, 1000);
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows
