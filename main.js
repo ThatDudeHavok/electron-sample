@@ -6,7 +6,6 @@ const app = electron.app
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
 
-const { checkForUpdates } = require('geiger-autoupdate');
 
 function handleStartupEvent() {
   if (process.platform !== 'win32') {
@@ -38,7 +37,6 @@ function createWindow () {
   if(handleStartupEvent()) {
     return;
   }
-  checkForUpdates();
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
 
@@ -48,6 +46,8 @@ function createWindow () {
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
 
+const { checkForUpdates } = require('geiger-autoupdate');
+  checkForUpdates();
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows
