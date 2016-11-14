@@ -1,6 +1,6 @@
 {
   "name": "electron-sample",
-  "version": "2.0.9",
+  "version": "2.0.11",
   "description": "A minimal Electron application",
   "main": "main.js",
   "author": {
@@ -29,7 +29,7 @@
     "electron-prebuilt": "^1.2.0"
   },
   "dependencies": {
-    "geiger-autoupdate": "0.0.14",
+    "geiger-autoupdate": "0.0.16",
     "request": "^2.74.0"
   }
 }
