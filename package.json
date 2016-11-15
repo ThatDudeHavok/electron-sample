@@ -1,6 +1,6 @@
 {
   "name": "electron-sample",
-  "version": "2.7.1",
+  "version": "3.1.4",
   "description": "A minimal Geiger application.",
   "main": "main.js",
   "author": {
