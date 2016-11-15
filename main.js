@@ -18,10 +18,10 @@ function handleStartupEvent() {
   switch (squirrelCommand) {
     case '--squirrel-install':
     case '--squirrel-updated':
-      spawn(updateDotExe, ['--createShortcut', target]).on('exit', function() { app.quit(); });
+      spawn(updateDotExe, ['--createShortcut', target]).on('close', function() { app.quit(); });
       return true;
     case '--squirrel-uninstall':
-      spawn(updateDotExe, ['--removeShortcut', target]).on('exit', function() { app.quit(); });
+      spawn(updateDotExe, ['--removeShortcut', target]).on('close', function() { app.quit(); });
       return true;
     case '--squirrel-obsolete':
       app.quit();
