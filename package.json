@@ -1,30 +1,33 @@
 {
   "name": "electron-sample",
-  "version": "2.0.22",
-  "description": "A minimal Electron application",
+  "version": "2.7.1",
+  "description": "A minimal Geiger application.",
   "main": "main.js",
   "author": {
     "name": "Gregori Kanatzidis",
-    "email": "kanatzidisg@gmail.com"
+    "email": "gregori@alabastertech.com"
   },
   "scripts": {
     "start": "electron ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron/electron-quick-start.git"
+    "url": "git+https://github.com/kanatzidis/electron-sample.git"
   },
   "keywords": [
     "Electron",
+    "geiger",
     "quick",
     "start",
-    "tutorial"
+    "tutorial",
+    "update",
+    "auto"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/electron/electron-quick-start/issues"
+    "url": "https://github.com/kanatzidis/electron-sample/issues"
   },
-  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "homepage": "https://github.com/kanatzidis/electron-sample#readme",
   "devDependencies": {
     "electron-prebuilt": "^1.2.0"
   },
